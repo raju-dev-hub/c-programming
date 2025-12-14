@@ -5,16 +5,19 @@ int main()
     int choice;
     printf("enter 1 for Celsius to Fahrenheit.\nenter 2 for Fehrenheit to Celsius \n");
     scanf("%d", &choice);
-    printf("enter value ");
-    scanf("%f", &value);
-    if (choice == 1)
+    if (choice == 1 || choice == 2)
     {
-        result = (value * 9.0 / 5.0) + 32;
+        printf("enter value ");
+        scanf("%f", &value);
+        if (choice == 1)
+        {
+            result = (value * 9.0 / 5.0) + 32;
+        }
+        else
+        {
+            result = (value - 32) * 5.0 / 9.0;
+        }
+        printf("Converted result= %f", result);
     }
-    else
-    {
-        result = (value - 32) * 5.0 / 9.0;
-    }
-    printf("Converted result= %f", result);
     return 0;
 }
